@@ -62,21 +62,13 @@ class _LoginPageState extends State<LoginPage> {
     if (!isValidated) {
       return;
     }
-    // print('Vai tentar logar');
     try {
-      // print('Entrou! $email $password');
-
       await storeAuth.login(email, password);
 
-      /* Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const MyHomePage())); */
       if (!mounted) return;
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const VerifyEmailPage()));
     } on AuthException catch (e) {
-      /* setState(() {
-        error = e.message;
-      }); */
       var snackBar = SnackBar(
         width: 344,
         behavior: SnackBarBehavior.floating,
@@ -161,7 +153,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    // print(storeAuth.isAuthenticated);
 
     return Scaffold(
         body: Container(
