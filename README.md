@@ -1,5 +1,7 @@
 # exemplo_firebase
 
+Este projeto contém os módulos de autenticação e cração de conta usando o firebase.
+
 A new Flutter project.
 
 ## Getting Started
